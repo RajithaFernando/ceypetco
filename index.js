@@ -33,3 +33,12 @@ app.post("/adddata", (req, res, next) => {
     )
     console.log( fishermens)
 });
+
+
+app.post("/rasa", (req, res, next) => {
+    console.log(req.body)
+    let number = req.body.mobile
+    console.log(number)
+    let balance = 'Your Balance for Account ' + number + ' is Rs. 00.21. Plese recharge or dial #247# for instant loan.'
+    res.json(balance)
+});
